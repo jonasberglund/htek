@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D740198C181C261200F75A81 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D740198B181C261200F75A81 /* MenuViewController.m */; };
+		D740198F181C26F700F75A81 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D740198E181C26F700F75A81 /* RootViewController.m */; };
+		D74019A4181C300B00F75A81 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = D740199F181C300B00F75A81 /* RECommonFunctions.m */; };
+		D74019A5181C300B00F75A81 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019A1181C300B00F75A81 /* RESideMenu.m */; };
+		D74019A6181C300B00F75A81 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019A3181C300B00F75A81 /* UIViewController+RESideMenu.m */; };
+		D74019A9181C34BA00F75A81 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019A8181C34BA00F75A81 /* EventsViewController.m */; };
+		D74019AC181C382000F75A81 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019AB181C382000F75A81 /* NewsViewController.m */; };
 		D7646B51181854D900640692 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B50181854D900640692 /* Foundation.framework */; };
 		D7646B53181854D900640692 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B52181854D900640692 /* CoreGraphics.framework */; };
 		D7646B55181854D900640692 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B54181854D900640692 /* UIKit.framework */; };
@@ -15,8 +22,6 @@
 		D7646B61181854D900640692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7646B60181854D900640692 /* AppDelegate.m */; };
 		D7646B64181854D900640692 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7646B62181854D900640692 /* Main_iPhone.storyboard */; };
 		D7646B67181854D900640692 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7646B65181854D900640692 /* Main_iPad.storyboard */; };
-		D7646B6A181854D900640692 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7646B69181854D900640692 /* MasterViewController.m */; };
-		D7646B6D181854D900640692 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7646B6C181854D900640692 /* DetailViewController.m */; };
 		D7646B6F181854D900640692 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7646B6E181854D900640692 /* Images.xcassets */; };
 		D7646B76181854D900640692 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B75181854D900640692 /* XCTest.framework */; };
 		D7646B77181854D900640692 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B50181854D900640692 /* Foundation.framework */; };
@@ -36,6 +41,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D740198A181C261200F75A81 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		D740198B181C261200F75A81 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		D740198D181C26F700F75A81 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D740198E181C26F700F75A81 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D740199E181C300B00F75A81 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		D740199F181C300B00F75A81 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		D74019A0181C300B00F75A81 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		D74019A1181C300B00F75A81 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		D74019A2181C300B00F75A81 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		D74019A3181C300B00F75A81 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		D74019A7181C34BA00F75A81 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		D74019A8181C34BA00F75A81 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		D74019AA181C382000F75A81 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		D74019AB181C382000F75A81 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		D7646B4D181854D900640692 /* H-sektionen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H-sektionen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7646B50181854D900640692 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D7646B52181854D900640692 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,10 +67,6 @@
 		D7646B60181854D900640692 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D7646B63181854D900640692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		D7646B66181854D900640692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		D7646B68181854D900640692 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		D7646B69181854D900640692 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		D7646B6B181854D900640692 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		D7646B6C181854D900640692 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D7646B6E181854D900640692 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D7646B74181854D900640692 /* H-sektionenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "H-sektionenTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7646B75181854D900640692 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -84,9 +99,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7401989181C259F00F75A81 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D740198A181C261200F75A81 /* MenuViewController.h */,
+				D740198B181C261200F75A81 /* MenuViewController.m */,
+				D740198D181C26F700F75A81 /* RootViewController.h */,
+				D740198E181C26F700F75A81 /* RootViewController.m */,
+				D74019A7181C34BA00F75A81 /* EventsViewController.h */,
+				D74019A8181C34BA00F75A81 /* EventsViewController.m */,
+				D74019AA181C382000F75A81 /* NewsViewController.h */,
+				D74019AB181C382000F75A81 /* NewsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D7401994181C2FEB00F75A81 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D740199E181C300B00F75A81 /* RECommonFunctions.h */,
+				D740199F181C300B00F75A81 /* RECommonFunctions.m */,
+				D74019A0181C300B00F75A81 /* RESideMenu.h */,
+				D74019A1181C300B00F75A81 /* RESideMenu.m */,
+				D74019A2181C300B00F75A81 /* UIViewController+RESideMenu.h */,
+				D74019A3181C300B00F75A81 /* UIViewController+RESideMenu.m */,
+			);
+			name = RESideMenu;
+			sourceTree = "<group>";
+		};
 		D7646B44181854D900640692 = {
 			isa = PBXGroup;
 			children = (
+				D7401994181C2FEB00F75A81 /* RESideMenu */,
 				D7646B56181854D900640692 /* H-sektionen */,
 				D7646B7B181854D900640692 /* H-sektionenTests */,
 				D7646B4F181854D900640692 /* Frameworks */,
@@ -117,14 +161,11 @@
 		D7646B56181854D900640692 /* H-sektionen */ = {
 			isa = PBXGroup;
 			children = (
+				D7401989181C259F00F75A81 /* Controllers */,
 				D7646B5F181854D900640692 /* AppDelegate.h */,
 				D7646B60181854D900640692 /* AppDelegate.m */,
 				D7646B62181854D900640692 /* Main_iPhone.storyboard */,
 				D7646B65181854D900640692 /* Main_iPad.storyboard */,
-				D7646B68181854D900640692 /* MasterViewController.h */,
-				D7646B69181854D900640692 /* MasterViewController.m */,
-				D7646B6B181854D900640692 /* DetailViewController.h */,
-				D7646B6C181854D900640692 /* DetailViewController.m */,
 				D7646B6E181854D900640692 /* Images.xcassets */,
 				D7646B57181854D900640692 /* Supporting Files */,
 			);
@@ -261,10 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74019A5181C300B00F75A81 /* RESideMenu.m in Sources */,
 				D7646B61181854D900640692 /* AppDelegate.m in Sources */,
-				D7646B6A181854D900640692 /* MasterViewController.m in Sources */,
+				D740198F181C26F700F75A81 /* RootViewController.m in Sources */,
 				D7646B5D181854D900640692 /* main.m in Sources */,
-				D7646B6D181854D900640692 /* DetailViewController.m in Sources */,
+				D740198C181C261200F75A81 /* MenuViewController.m in Sources */,
+				D74019A4181C300B00F75A81 /* RECommonFunctions.m in Sources */,
+				D74019AC181C382000F75A81 /* NewsViewController.m in Sources */,
+				D74019A9181C34BA00F75A81 /* EventsViewController.m in Sources */,
+				D74019A6181C300B00F75A81 /* UIViewController+RESideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +531,7 @@
 				D7646B87181854D900640692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7646B88181854D900640692 /* Build configuration list for PBXNativeTarget "H-sektionenTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +540,7 @@
 				D7646B8A181854D900640692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
