@@ -58,6 +58,10 @@
             navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"eventsController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
+        case 2:
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"lunchController"]];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
         default:
             break;
     }

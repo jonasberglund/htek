@@ -14,6 +14,7 @@
 		D74019A6181C300B00F75A81 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019A3181C300B00F75A81 /* UIViewController+RESideMenu.m */; };
 		D74019A9181C34BA00F75A81 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019A8181C34BA00F75A81 /* EventsViewController.m */; };
 		D74019AC181C382000F75A81 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019AB181C382000F75A81 /* NewsViewController.m */; };
+		D74019AF181C815000F75A81 /* EventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019AE181C815000F75A81 /* EventInfoViewController.m */; };
 		D7646B51181854D900640692 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B50181854D900640692 /* Foundation.framework */; };
 		D7646B53181854D900640692 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B52181854D900640692 /* CoreGraphics.framework */; };
 		D7646B55181854D900640692 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B54181854D900640692 /* UIKit.framework */; };
@@ -55,6 +56,8 @@
 		D74019A8181C34BA00F75A81 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		D74019AA181C382000F75A81 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		D74019AB181C382000F75A81 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		D74019AD181C815000F75A81 /* EventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventInfoViewController.h; sourceTree = "<group>"; };
+		D74019AE181C815000F75A81 /* EventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInfoViewController.m; sourceTree = "<group>"; };
 		D7646B4D181854D900640692 /* H-sektionen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H-sektionen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7646B50181854D900640692 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D7646B52181854D900640692 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,6 +113,8 @@
 				D74019A8181C34BA00F75A81 /* EventsViewController.m */,
 				D74019AA181C382000F75A81 /* NewsViewController.h */,
 				D74019AB181C382000F75A81 /* NewsViewController.m */,
+				D74019AD181C815000F75A81 /* EventInfoViewController.h */,
+				D74019AE181C815000F75A81 /* EventInfoViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D74019A5181C300B00F75A81 /* RESideMenu.m in Sources */,
+				D74019AF181C815000F75A81 /* EventInfoViewController.m in Sources */,
 				D7646B61181854D900640692 /* AppDelegate.m in Sources */,
 				D740198F181C26F700F75A81 /* RootViewController.m in Sources */,
 				D7646B5D181854D900640692 /* main.m in Sources */,
