@@ -11,5 +11,6 @@
 
 @interface EventsViewController : UITableViewController
 - (IBAction)showMenu;
+@property (strong, nonatomic) IBOutlet UITableView *eventsTableView;
 
 @end

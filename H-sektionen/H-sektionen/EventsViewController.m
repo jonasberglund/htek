@@ -20,6 +20,10 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self loadEvents];
+    
+    [self.refreshControl addTarget:self
+                            action:@selector(reloadData)
+                  forControlEvents:UIControlEventValueChanged];
    
 }
 
@@ -37,52 +41,7 @@
     
     events = [[json objectForKey:@"feed"] objectForKey:@"entry"];
     
-    
-    /*
-     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-     NSData* data = [NSData dataWithContentsOfURL:
-     [NSURL URLWithString: @"https://api.twitter.com/1/statuses/public_timeline.json"]];
-     
-     NSError* error;
-     
-     tweets = [NSJSONSerialization JSONObjectWithData:data
-     options:kNilOptions
-     error:&error];
-     
-     dispatch_async(dispatch_get_main_queue(), ^{
-     [self.tableView reloadData];
-     });
-     });
-     
-     */
-    
-    /*
-     String data = getJSON(Constants.GOOGLEEVENTS);
-     
-     JSONObject json_obj = new JSONObject(data).getJSONObject("feed");
-     JSONArray json_arr = json_obj.getJSONArray("entry");
-     
-     List<Event> events = new ArrayList<Event>();
-     
-     //Collection the right content from JSON
-     for (int i = 0; i < json_arr.length(); i++){
-     String fullDate;
-     String title = json_arr.getJSONObject(i).getJSONObject("title").optString("$t");
-     String description =   json_arr.getJSONObject(i).getJSONObject("content").optString("$t");
-     String time =          json_arr.getJSONObject(i).getJSONArray("gd$when").getJSONObject(0).optString("startTime");
-     String endTime = json_arr.getJSONObject(i).getJSONArray("gd$when").getJSONObject(0).optString("endTime");
-     String where = json_arr.getJSONObject(i).getJSONArray("gd$where").getJSONObject(0).optString("valueString");
-     
-     fullDate = formDate(time, endTime);
-     time = toDate(time);
-     
-     //Add events if it has i title
-     if (!title.equals("")){
-     events.add(new Event(title, description, where, time + ". ", fullDate));
-     }
-     }
-     return events;
-     */
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -122,6 +81,14 @@
         EventInfoViewController *eventController = segue.destinationViewController;
         eventController.detailItem = event;
     }
+}
+
+- (void) reloadData{
+    [self loadEvents];
+    [self.eventsTableView reloadData];
+    
+    [self.refreshControl endRefreshing];
+   
 }
 
 - (IBAction)showMenu {
