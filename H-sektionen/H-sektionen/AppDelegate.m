@@ -43,4 +43,45 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (NSString *)toDate:(NSString *)time {
+    
+    NSCalendar *now = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSArray *date = [time componentsSeparatedByString:@"T"];
+    NSArray *dates = [time componentsSeparatedByString:@"-"];
+    
+    NSInteger year = [dates[0] integerValue];
+    NSInteger month = [dates[1] integerValue];
+    NSInteger day = [dates[2] integerValue];
+    
+    NSDateComponents *components = [now components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    
+    NSInteger days = day - [components day];
+    NSInteger months = month - [components month];
+    NSInteger years = year - [components year];
+    
+    NSMutableString *clock = [NSMutableString stringWithString: @""];
+    if(time.length > @"1967-09-03".length){
+        NSString *clock_temp = [NSString stringWithFormat:@"kl: %@", [date[1] substringWithRange:NSMakeRange(0, 5)]];
+        [clock setString:clock_temp];
+    }
+    
+    
+    if(years == 1)
+        return @"Nästa år";
+    else if (years > 1)
+        return [NSString stringWithFormat:@"Om %d år", years];
+    else if (months == 1)
+        return @"Nästa månad";
+    else if (months > 1)
+        return [NSString stringWithFormat:@"Om %d månader", months];
+    else if (days == 1)
+        return [NSString stringWithFormat:@"I morgon %@", clock];
+    else if (days > 1)
+        return [NSString stringWithFormat:@"Om %d dagar", days];
+    
+    return [NSString stringWithFormat:@"Idag %d %@", days, clock];
+}
+
+
 @end

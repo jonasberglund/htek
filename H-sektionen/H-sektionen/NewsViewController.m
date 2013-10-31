@@ -24,23 +24,40 @@
                             action:@selector(reloadData)
                   forControlEvents:UIControlEventValueChanged];
     
+    
+    
 }
 
 - (void)loadEvents{
-    
-    NSData* data = [NSData dataWithContentsOfURL:
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        //Spinner
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        spinner.center = CGPointMake(160, 240);
+        spinner.tag = 12;
+        [self.view addSubview:spinner];
+        [spinner startAnimating];
+        
+        NSData* data = [NSData dataWithContentsOfURL:
                     [NSURL URLWithString: @"http://www.prokrastinera.com/hsektionen/newsfeed/?week=0"]];
     
     
-    NSError* error;
+        NSError* error;
     
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
                                                          options:kNilOptions
                                                            error:&error];
     
-    news = [json objectForKey:@"data"];
+        news = [json objectForKey:@"data"];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            [spinner stopAnimating];
+            [self.refreshControl endRefreshing];
+            
+        });
     
-    
+    });
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -71,12 +88,12 @@
     return cell;
 }
 
-
 - (void) reloadData{
+    
     [self loadEvents];
     [self.newsTableView reloadData];
     
-    [self.refreshControl endRefreshing];
+    
     
 }
 

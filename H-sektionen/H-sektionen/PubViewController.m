@@ -1,33 +1,39 @@
 //
-//  EventsViewController.m
+//  PubViewController.m
 //  H-sektionen
 //
-//  Created by Jonas Berglund on 2013-10-26.
+//  Created by Jonas Berglund on 2013-10-30.
 //  Copyright (c) 2013 Jonas Berglund. All rights reserved.
 //
 
-#import "EventsViewController.h"
-#import "EventInfoViewController.h"
+#import "PubViewController.h"
+#import "MenuViewController.h"
+#import "AppDelegate.h"
 
-@interface EventsViewController (){
-    NSArray *events;
+@interface PubViewController (){
+    NSArray *pubs;
 }
 
 @end
 
-@implementation EventsViewController
+@implementation PubViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-   
-    [self loadEvents];
+    
+    [self loadPubs];
     
     [self.refreshControl addTarget:self
                             action:@selector(reloadData)
                   forControlEvents:UIControlEventValueChanged];
+    
+    
+    
+    
+    
 }
 
-- (void)loadEvents{
+- (void)loadPubs{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         //Spinner
@@ -38,53 +44,59 @@
         [spinner startAnimating];
         
         NSData* data = [NSData dataWithContentsOfURL:
-                    [NSURL URLWithString: @"https://www.google.com/calendar/feeds/5id1508tk2atummuj0vq33d7lc@group.calendar.google.com/public/full?alt=json&orderby=starttime&sortorder=ascending&futureevents=true&"]];
+                        [NSURL URLWithString: @"https://www.google.com/calendar/feeds/ad5l0g27kpvt7klvlsudmodnhk@group.calendar.google.com/public/full?alt=json&orderby=starttime&sortorder=ascending&futureevents=true&"]];
+        
     
-    
+        
         NSError* error;
-    
+        
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                             options:kNilOptions
-                                               error:&error];
-    
-        events = [[json objectForKey:@"feed"] objectForKey:@"entry"];
-       
-    
+                                                             options:kNilOptions
+                                                               error:&error];
+        
+        pubs = [[json objectForKey:@"feed"] objectForKey:@"entry"];
+        
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
             [spinner stopAnimating];
             [self.refreshControl endRefreshing];
         });
-
+        
     });
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return events.count;
+    return pubs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"EventCell";
+    static NSString *CellIdentifier = @"PubCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSDictionary *event = [events objectAtIndex:indexPath.row];
-    NSString *title = [[event objectForKey:@"title"] objectForKey:@"$t"];
-   // NSString *description = [[event objectForKey:@"content"] objectForKey:@"$t"];
+    NSDictionary *pub = [pubs objectAtIndex:indexPath.row];
+    NSString *title = [[pub objectForKey:@"title"] objectForKey:@"$t"];
+    // NSString *description = [[event objectForKey:@"content"] objectForKey:@"$t"];
     //NSString *location = [[[event objectForKey:@"gd$where"] objectAtIndex:0] objectForKey:@"valueString"];
-    NSString *startTime = [[[event objectForKey:@"gd$when"] objectAtIndex:0] objectForKey:@"startTime"];
+    NSString *startTime = [[[pub objectForKey:@"gd$when"] objectAtIndex:0] objectForKey:@"startTime"];
     //NSString *endTime = [[[event objectForKey:@"gd$when"] objectAtIndex:0] objectForKey:@"endTime"];
+    
+    
     
     NSString *in_time = [self toDate:startTime];
     
     cell.textLabel.text = title;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", in_time];
+    
+    
+    
     
     return cell;
     
@@ -131,25 +143,12 @@
 }
 
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showEvent"]) {
-        
-        NSInteger row = [[self tableView].indexPathForSelectedRow row];
-        NSDictionary *event = [events objectAtIndex:row];
-        
-        EventInfoViewController *eventController = segue.destinationViewController;
-        eventController.detailItem = event;
-    }
-}
-
 - (void) reloadData{
-    [self loadEvents];
-    [self.eventsTableView reloadData];
+    [self loadPubs];
+    [self.pubsTableView reloadData];
     
     [self.refreshControl endRefreshing];
-   
+    
 }
 
 - (IBAction)showMenu {
