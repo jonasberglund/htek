@@ -89,12 +89,8 @@
 }
 
 - (void) reloadData{
-    
     [self loadEvents];
     [self.newsTableView reloadData];
-    
-    
-    
 }
 
 

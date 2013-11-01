@@ -66,6 +66,23 @@
             navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"pubsController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
+        case 4:
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"infoController"]];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 5:
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"suggestController"]];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 6:
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"faultreportController"]];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 7:
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"aboutController"]];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+
         default:
             break;
     }
