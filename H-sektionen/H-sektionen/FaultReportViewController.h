@@ -12,5 +12,6 @@
 @interface FaultReportViewController : UIViewController <MFMailComposeViewControllerDelegate>
 -(IBAction)showMenu;
 - (IBAction)showEmail:(id)sender;
+- (IBAction)showComputerEmail:(id)sender;
 
 @end

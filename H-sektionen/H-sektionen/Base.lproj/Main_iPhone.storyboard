@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qiL-5W-Nyb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -539,27 +539,28 @@ Anders Johansson</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ST3-bJ-b9V">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST3-bJ-b9V">
                                 <rect key="frame" x="45" y="375" width="226" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Skicka in ditt förslag!">
-                                            <attributes>
-                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Skicka in ditt förslag!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showEmail:" destination="A3h-XV-UZn" eventType="touchUpInside" id="iKg-SI-19p"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Här kan du skicka in förslag till H-sektionen. Har du en kul idèe? Är det något du är missnöjd med eller saknar? Låt oss veta!" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-m2-BMP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-m2-BMP">
                                 <rect key="frame" x="25" y="119" width="271" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Här kan du skicka in förslag till H-sektionen. Har du en kul idèe? Är det något du är missnöjd med eller saknar? Låt oss veta!">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -589,18 +590,12 @@ Anders Johansson</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtv-gD-zO2">
-                                <rect key="frame" x="69" y="467" width="176" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtv-gD-zO2">
+                                <rect key="frame" x="72" y="445" width="176" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Gör en felanmälan!">
-                                            <attributes>
-                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Gör en felanmälan!">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="showEmail:" destination="lI1-7I-n8K" eventType="touchUpInside" id="MxZ-Rv-oJW"/>
@@ -611,7 +606,7 @@ Anders Johansson</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZO-CJ-JyM">
-                                <rect key="frame" x="30" y="94" width="261" height="287"/>
+                                <rect key="frame" x="30" y="94" width="261" height="751"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -619,7 +614,7 @@ Anders Johansson</string>
 
 Vad kan du anmäla och var? Se nedan! 
 
-Datorproblem? Kryssa i rutan så skickas det till data-enheten.
+Datorproblem? Klicka istället på knappen "Datorproblem?"
 
 Vid behov av kontakt med väktare kan man ringa 772 44 99, vid svar begär att bli kopplad till "Chalmersväktaren". Väktarna nås endast utanför ordinarie arbetstider.Vid akuta fastighetsfel finns det möjlighet att kontakta fastighetsägarens beredskapssökare på 0746 36 62 98, aternativt SOS Alarmering 703 17 25. 
 
@@ -638,6 +633,18 @@ Fel eller buggar i appen: Skicka gärna alla detaljer om buggar i H-sektionsappe
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4P-I1-8iH">
+                                <rect key="frame" x="72" y="483" width="176" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Datorproblem?">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="showComputerEmail:" destination="lI1-7I-n8K" eventType="touchUpInside" id="53Y-if-NCB"/>
+                                    <action selector="showEmail:" destination="lI1-7I-n8K" eventType="touchUpInside" id="Nlv-v2-and"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

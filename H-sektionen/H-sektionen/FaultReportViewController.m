@@ -59,6 +59,25 @@
     
 }
 
+- (IBAction)showComputerEmail:(id)sender {
+    // Email Subject
+    NSString *emailTitle = @"Felanmälan";
+    // Email Content
+    NSString *messageBody = @"Det här är trasigt: \n\n Var: \n\n\n ---------------\nDen här felanmälan är skickat från H-sektionsappen";
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"support@chalmers.se"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+}
+
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     switch (result)

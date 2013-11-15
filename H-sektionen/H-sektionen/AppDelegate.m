@@ -7,13 +7,65 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // Override point for customization after application launch.
+    [Parse setApplicationId:@"f4nb9heDlUu0uBmPiOJlYCXxlNnHftMkoBRkurLN"
+                  clientKey:@"y7raMOFCv6mkDLm953GFBuRI6P3XAzDYtvbgzmm4"];
+    
+    if (application.applicationState != UIApplicationStateBackground) {
+        // Track an app open here if we launch with a push, unless
+        // "content_available" was used to trigger a background push (introduced
+        // in iOS 7). In that case, we skip tracking here to avoid double counting
+        // the app-open.
+        BOOL preBackgroundPush = ![application respondsToSelector:@selector(backgroundRefreshStatus)];
+        BOOL oldPushHandlerOnly = ![self respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)];
+        BOOL noPushPayload = ![launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
+            [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+        }
+    }
+    
+    
+    // Register for push notifications
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
+    
     // Override point for customization after application launch.
     return YES;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+    
+    if (application.applicationState == UIApplicationStateInactive) {
+        [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+    }
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    if (application.applicationState == UIApplicationStateInactive) {
+        [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
