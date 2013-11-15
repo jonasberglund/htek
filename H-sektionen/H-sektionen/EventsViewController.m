@@ -25,6 +25,8 @@
     [self.refreshControl addTarget:self
                             action:@selector(reloadData)
                   forControlEvents:UIControlEventValueChanged];
+    
+    [self.refreshControl setTintColor:[UIColor purpleColor]];
 }
 
 - (void)loadEvents{
@@ -42,10 +44,12 @@
     
     
         NSError* error;
-    
-        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                             options:kNilOptions
-                                               error:&error];
+        NSDictionary *json;
+        if(data != nil){
+            json = [NSJSONSerialization JSONObjectWithData:data
+                                                   options:kNilOptions
+                                                     error:&error];
+        }
     
         events = [[json objectForKey:@"feed"] objectForKey:@"entry"];
        
@@ -54,6 +58,8 @@
             [self.tableView reloadData];
             [spinner stopAnimating];
             [self.refreshControl endRefreshing];
+            
+            
         });
 
     });
@@ -117,15 +123,15 @@
     if(years == 1)
         return @"Nästa år";
     else if (years > 1)
-        return [NSString stringWithFormat:@"Om %i år", years];
+        return [NSString stringWithFormat:@"Om %li år", (long)years];
     else if (months == 1)
         return @"Nästa månad";
     else if (months > 1)
-        return [NSString stringWithFormat:@"Om %i månader", months];
+        return [NSString stringWithFormat:@"Om %li månader", (long)months];
     else if (days == 1)
         return [NSString stringWithFormat:@"I morgon %@", clock];
     else if (days > 1)
-        return [NSString stringWithFormat:@"Om %i dagar", days];
+        return [NSString stringWithFormat:@"Om %li dagar", (long)days];
     
     return [NSString stringWithFormat:@"Idag %@", clock];
 }

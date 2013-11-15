@@ -1,15 +1,15 @@
 //
-//  InfoViewController.m
+//  InfoMembersViewController.m
 //  H-sektionen
 //
-//  Created by Jonas Berglund on 2013-11-01.
+//  Created by Jonas Berglund on 2013-11-05.
 //  Copyright (c) 2013 Jonas Berglund. All rights reserved.
 //
 
-#import "InfoViewController.h"
+#import "InfoMembersViewController.h"
 #import "MenuViewController.h"
 
-@interface InfoViewController (){
+@interface InfoMembersViewController (){
     NSArray *info;
     NSArray *members;
     NSArray *links;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation InfoViewController
+@implementation InfoMembersViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -46,10 +46,7 @@
             json = [NSJSONSerialization JSONObjectWithData:data
                                                    options:kNilOptions
                                                      error:&error];
-        }
-        
-        
-        members = [json objectForKey:@"members"];
+        }        members = [json objectForKey:@"members"];
         links = [json objectForKey:@"links"];
         openingHours = [json objectForKey:@"openinghours"];
         
@@ -72,35 +69,53 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return openingHours.count;
+    return members.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"InfoCell";
+    static NSString *CellIdentifier = @"InfoMembersCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    //MEMBERS
+    NSDictionary *member = [members objectAtIndex:indexPath.row];
+     NSString *name = [member objectForKey:@"name"];
+     NSString *posision = [member objectForKey:@"position"];
+     NSString *email = [member objectForKey:@"email"];
+     NSString *phone = [member objectForKey:@"phone"];
+     // NSString *description = [[event objectForKey:@"content"] objectForKey:@"$t"];
+     //NSString *location = [[[event objectForKey:@"gd$where"] objectAtIndex:0] objectForKey:@"valueString"];
+     // NSString *startTime = [[[pub objectForKey:@"gd$when"] objectAtIndex:0] objectForKey:@"startTime"];
+     //NSString *endTime = [[[event objectForKey:@"gd$when"] objectAtIndex:0] objectForKey:@"endTime"];
+     
+     NSString *imgUrl = [member objectForKey:@"picture"];
+     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]];
+     
+     cell.textLabel.text = name;
+     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@\n%@\n%@", posision, email, phone];
+     cell.imageView.image = image;
+    
+    //LINKS
+    /*NSDictionary *link = [links objectAtIndex:indexPath.row];
+     NSString *name = [link objectForKey:@"name"];
+     NSString *href = [link objectForKey:@"href"];
+     
+     cell.textLabel.text = name;
+     cell.detailTextLabel.text = href;*/
+    
+    
     //OPENING HOURS
-    NSDictionary *openingHour = [openingHours objectAtIndex:indexPath.row];
+    /*NSDictionary *openingHour = [openingHours objectAtIndex:indexPath.row];
     NSString *name = [openingHour objectForKey:@"name"];
     NSString *opentime = [openingHour objectForKey:@"opentime"];
     
-    NSArray *array = [opentime componentsSeparatedByString:@"<br/>"];
+    cell.textLabel.text = name;
+    cell.detailTextLabel.text = opentime;*/
     
-    NSMutableString *opentimes = [[NSMutableString alloc] init];
-    
-    for (int i = 0; i < array.count; i++) {
-        [opentimes appendString:array[i]];
-        [opentimes appendString:@"\n"];
-        
-    }
-     cell.textLabel.text = name;
-     cell.detailTextLabel.text = opentimes;
-
     return cell;
     
 }

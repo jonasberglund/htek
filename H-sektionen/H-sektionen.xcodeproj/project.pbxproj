@@ -15,6 +15,7 @@
 		D74019A9181C34BA00F75A81 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019A8181C34BA00F75A81 /* EventsViewController.m */; };
 		D74019AC181C382000F75A81 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019AB181C382000F75A81 /* NewsViewController.m */; };
 		D74019AF181C815000F75A81 /* EventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019AE181C815000F75A81 /* EventInfoViewController.m */; };
+		D76222C1182CF333009D5087 /* InfoTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76222C0182CF333009D5087 /* InfoTabBarViewController.m */; };
 		D7646B51181854D900640692 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B50181854D900640692 /* Foundation.framework */; };
 		D7646B53181854D900640692 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B52181854D900640692 /* CoreGraphics.framework */; };
 		D7646B55181854D900640692 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B54181854D900640692 /* UIKit.framework */; };
@@ -29,6 +30,9 @@
 		D7646B78181854D900640692 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B54181854D900640692 /* UIKit.framework */; };
 		D7646B80181854D900640692 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7646B7E181854D900640692 /* InfoPlist.strings */; };
 		D7646B82181854D900640692 /* H_sektionenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7646B81181854D900640692 /* H_sektionenTests.m */; };
+		D772AE7E18291C760077B080 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772AE7D18291C760077B080 /* MessageUI.framework */; };
+		D772AE81182942080077B080 /* InfoMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D772AE80182942080077B080 /* InfoMembersViewController.m */; };
+		D772AE84182946070077B080 /* InfoLinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D772AE83182946070077B080 /* InfoLinksViewController.m */; };
 		D7BEFFA318217B24007DFF09 /* PubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEFFA218217B24007DFF09 /* PubViewController.m */; };
 		D7BEFFA818227AE1007DFF09 /* LunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEFFA718227AE1007DFF09 /* LunchViewController.m */; };
 		D7BEFFAB1823C1DF007DFF09 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEFFAA1823C1DF007DFF09 /* InfoViewController.m */; };
@@ -64,6 +68,8 @@
 		D74019AB181C382000F75A81 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		D74019AD181C815000F75A81 /* EventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventInfoViewController.h; sourceTree = "<group>"; };
 		D74019AE181C815000F75A81 /* EventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInfoViewController.m; sourceTree = "<group>"; };
+		D76222BF182CF333009D5087 /* InfoTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTabBarViewController.h; sourceTree = "<group>"; };
+		D76222C0182CF333009D5087 /* InfoTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTabBarViewController.m; sourceTree = "<group>"; };
 		D7646B4D181854D900640692 /* H-sektionen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H-sektionen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7646B50181854D900640692 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D7646B52181854D900640692 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +88,11 @@
 		D7646B7D181854D900640692 /* H-sektionenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "H-sektionenTests-Info.plist"; sourceTree = "<group>"; };
 		D7646B7F181854D900640692 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7646B81181854D900640692 /* H_sektionenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = H_sektionenTests.m; sourceTree = "<group>"; };
+		D772AE7D18291C760077B080 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D772AE7F182942080077B080 /* InfoMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoMembersViewController.h; sourceTree = "<group>"; };
+		D772AE80182942080077B080 /* InfoMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoMembersViewController.m; sourceTree = "<group>"; };
+		D772AE82182946070077B080 /* InfoLinksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoLinksViewController.h; sourceTree = "<group>"; };
+		D772AE83182946070077B080 /* InfoLinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoLinksViewController.m; sourceTree = "<group>"; };
 		D7BEFFA118217B24007DFF09 /* PubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubViewController.h; sourceTree = "<group>"; };
 		D7BEFFA218217B24007DFF09 /* PubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubViewController.m; sourceTree = "<group>"; };
 		D7BEFFA618227AE1007DFF09 /* LunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchViewController.h; sourceTree = "<group>"; };
@@ -101,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D772AE7E18291C760077B080 /* MessageUI.framework in Frameworks */,
 				D7646B53181854D900640692 /* CoreGraphics.framework in Frameworks */,
 				D7646B55181854D900640692 /* UIKit.framework in Frameworks */,
 				D7646B51181854D900640692 /* Foundation.framework in Frameworks */,
@@ -137,14 +149,20 @@
 				D7BEFFA218217B24007DFF09 /* PubViewController.m */,
 				D7BEFFA618227AE1007DFF09 /* LunchViewController.h */,
 				D7BEFFA718227AE1007DFF09 /* LunchViewController.m */,
+				D76222BF182CF333009D5087 /* InfoTabBarViewController.h */,
+				D76222C0182CF333009D5087 /* InfoTabBarViewController.m */,
 				D7BEFFA91823C1DF007DFF09 /* InfoViewController.h */,
 				D7BEFFAA1823C1DF007DFF09 /* InfoViewController.m */,
-				D7BEFFAC1823C7E1007DFF09 /* AboutViewController.h */,
-				D7BEFFAD1823C7E1007DFF09 /* AboutViewController.m */,
+				D772AE7F182942080077B080 /* InfoMembersViewController.h */,
+				D772AE80182942080077B080 /* InfoMembersViewController.m */,
+				D772AE82182946070077B080 /* InfoLinksViewController.h */,
+				D772AE83182946070077B080 /* InfoLinksViewController.m */,
 				D7BEFFAF1823CA24007DFF09 /* SuggestViewController.h */,
 				D7BEFFB01823CA24007DFF09 /* SuggestViewController.m */,
 				D7BEFFB21823CA37007DFF09 /* FaultReportViewController.h */,
 				D7BEFFB31823CA37007DFF09 /* FaultReportViewController.m */,
+				D7BEFFAC1823C7E1007DFF09 /* AboutViewController.h */,
+				D7BEFFAD1823C7E1007DFF09 /* AboutViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -185,6 +203,7 @@
 		D7646B4F181854D900640692 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D772AE7D18291C760077B080 /* MessageUI.framework */,
 				D7646B50181854D900640692 /* Foundation.framework */,
 				D7646B52181854D900640692 /* CoreGraphics.framework */,
 				D7646B54181854D900640692 /* UIKit.framework */,
@@ -340,6 +359,7 @@
 				D74019A5181C300B00F75A81 /* RESideMenu.m in Sources */,
 				D74019AF181C815000F75A81 /* EventInfoViewController.m in Sources */,
 				D7646B61181854D900640692 /* AppDelegate.m in Sources */,
+				D772AE81182942080077B080 /* InfoMembersViewController.m in Sources */,
 				D7BEFFA318217B24007DFF09 /* PubViewController.m in Sources */,
 				D740198F181C26F700F75A81 /* RootViewController.m in Sources */,
 				D7646B5D181854D900640692 /* main.m in Sources */,
@@ -348,8 +368,10 @@
 				D74019A4181C300B00F75A81 /* RECommonFunctions.m in Sources */,
 				D7BEFFB11823CA24007DFF09 /* SuggestViewController.m in Sources */,
 				D74019AC181C382000F75A81 /* NewsViewController.m in Sources */,
+				D772AE84182946070077B080 /* InfoLinksViewController.m in Sources */,
 				D7BEFFAE1823C7E1007DFF09 /* AboutViewController.m in Sources */,
 				D7BEFFA818227AE1007DFF09 /* LunchViewController.m in Sources */,
+				D76222C1182CF333009D5087 /* InfoTabBarViewController.m in Sources */,
 				D7BEFFB41823CA37007DFF09 /* FaultReportViewController.m in Sources */,
 				D74019A9181C34BA00F75A81 /* EventsViewController.m in Sources */,
 				D74019A6181C300B00F75A81 /* UIViewController+RESideMenu.m in Sources */,

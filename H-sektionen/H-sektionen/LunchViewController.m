@@ -12,12 +12,14 @@
 @interface LunchViewController (){
     NSArray *lunches;
     NSXMLParser *parser;
+    NSXMLParser *parserKokboken;
     NSMutableArray *feeds;
     NSMutableDictionary *item;
     NSMutableString *title;
     NSMutableString *link;
     NSMutableString *description;
     NSString *element;
+    NSString *currentTime;
 }
 
 @end
@@ -28,9 +30,9 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd/MM yyyy"];
-    NSString *CurrentTime = [dateFormatter stringFromDate:[NSDate date]];
-    self.todayLabel.text = CurrentTime;
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    currentTime = [dateFormatter stringFromDate:[NSDate date]];
+    self.todayLabel.text = currentTime;
     [self loadLunch];
     
 }
@@ -46,19 +48,36 @@
         [spinner startAnimating];
     
         
+        
         feeds = [[NSMutableArray alloc] init];
+        
+        
+        
+        
+        //Kokboken
+        NSURL *kokbokenURL = [NSURL URLWithString: [NSString stringWithFormat:@"http://cm.lskitchen.se/lindholmen/kokboken/sv/%@.rss", currentTime]];
+        parserKokboken = [[NSXMLParser alloc] initWithContentsOfURL:kokbokenURL];
+        
+        [parserKokboken setDelegate:self];
+        [parserKokboken setShouldResolveExternalEntities:NO];
+        [parserKokboken parse];
+        
+        
+        //LS
         NSURL *url = [NSURL URLWithString:@"http://cm.lskitchen.se/lindholmen/foodcourt/sv/today.rss"];
         parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
         
         [parser setDelegate:self];
         [parser setShouldResolveExternalEntities:NO];
         [parser parse];
-        
+
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
             [spinner stopAnimating];
             [self.refreshControl endRefreshing];
+            
+            
         });
         
     });
@@ -98,12 +117,18 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     
-    if ([element isEqualToString:@"title"]) {
-        [title appendString:string];
+    NSArray *array = [string componentsSeparatedByString:@"@"];
+    
+    if ([element isEqualToString:@"title"] && !([string isEqualToString:@"Meny Food Court"])) {
+        if([string isEqualToString:@"Dagens lunch"]){
+            [title appendString:@"Kokboken"];
+        } else {
+            [title appendString:string];
+        }
     } else if ([element isEqualToString:@"link"]) {
         [link appendString:string];
-    } else if ([element isEqualToString:@"description"]) {
-        [description appendString:string];
+    } else if ([element isEqualToString:@"description"] && !([string isEqualToString:@"Meny Food Court"])) {
+        [description appendString:array[0]];
     }
     
 }

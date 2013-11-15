@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface FaultReportViewController : UIViewController
+@interface FaultReportViewController : UIViewController <MFMailComposeViewControllerDelegate>
 -(IBAction)showMenu;
+- (IBAction)showEmail:(id)sender;
 
 @end

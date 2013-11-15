@@ -21,7 +21,11 @@
     self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuController"];
     self.backgroundImage = [UIImage imageNamed:@"MenuBackground"];
     self.delegate = (MenuViewController *)self.menuViewController;
+   
 }
-
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 @end

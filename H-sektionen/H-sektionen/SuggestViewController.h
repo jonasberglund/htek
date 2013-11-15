@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SuggestViewController : UIViewController
+@interface SuggestViewController : UIViewController <MFMailComposeViewControllerDelegate>
 -(IBAction)showMenu;
+- (IBAction)showEmail:(id)sender;
 
 @end
