@@ -56,32 +56,34 @@
         [self.view addSubview:spinner];
         [spinner startAnimating];
         
-        feeds = [[NSMutableArray alloc] init];
         
-        NSString *connect = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://gasquen.se"] encoding:NSUTF8StringEncoding error:nil];
-        
-        if(connect == NULL){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Felmeddelande" message:@"Kontrollera din interwebsanslutning" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-            
-            _isItTodayLabel.hidden = true;
-            [_descToday setHidden:YES];
-            [_descTomorrow setHidden:YES];
-        }else{
-            _isItTodayLabel.hidden = false;
-            [_descToday setHidden:NO];
-            [_descTomorrow setHidden:NO];
-        }
-        
-        NSURL *url = [NSURL URLWithString:@"http://gasquen.chs.chalmers.se/rss.php"];
-        parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-        
-        [parser setDelegate:self];
-        [parser setShouldResolveExternalEntities:NO];
-        [parser parse];
         
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            feeds = [[NSMutableArray alloc] init];
+            
+            NSString *connect = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://gasquen.se"] encoding:NSUTF8StringEncoding error:nil];
+            
+            if(connect == NULL){
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Felmeddelande" message:@"Kontrollera din interwebsanslutning" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                
+                _isItTodayLabel.hidden = true;
+                [_descToday setHidden:YES];
+                [_descTomorrow setHidden:YES];
+            }else{
+                _isItTodayLabel.hidden = false;
+                [_descToday setHidden:NO];
+                [_descTomorrow setHidden:NO];
+            }
+            
+            NSURL *url = [NSURL URLWithString:@"http://gasquen.chs.chalmers.se/rss.php"];
+            parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+            
+            [parser setDelegate:self];
+            [parser setShouldResolveExternalEntities:NO];
+            [parser parse];
+            
                        [spinner stopAnimating];
       
             
