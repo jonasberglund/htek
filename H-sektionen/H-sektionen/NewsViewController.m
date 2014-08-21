@@ -7,6 +7,7 @@
 //
 
 #import "NewsViewController.h"
+#import "NewsInfoViewController.h"
 
 @interface NewsViewController (){
     NSMutableArray *news;
@@ -40,7 +41,7 @@
         [spinner startAnimating];
         
         NSData* data = [NSData dataWithContentsOfURL:
-                        [NSURL URLWithString: [NSString stringWithFormat:@"http://www.prokrastinera.com/hsektionen/newsfeed/?week=%d", 0]]];
+                        [NSURL URLWithString: [NSString stringWithFormat:@"http://www.htek.se/appen/newsfeed/?week=%d", 0]]];
     
         NSError* error;
         NSDictionary *json;
@@ -120,9 +121,7 @@
        
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]];
         dispatch_sync(dispatch_get_main_queue(), ^{
-            
-           
-            
+  
             [[cell imageView] setImage:image];
             //cell.imageView.image = image;
             [cell setNeedsLayout];
@@ -139,9 +138,19 @@
         cell.hidden = true;
     }
     
-    
-    
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showNews"]) {
+        
+        NSInteger row = [[self tableView].indexPathForSelectedRow row];
+        NSDictionary *newsItem = [news objectAtIndex:row];
+        
+        NewsInfoViewController *newsController = segue.destinationViewController;
+        newsController.detailItem = newsItem;
+    }
 }
 
 
@@ -149,6 +158,7 @@
     [self loadNews];
     [self.newsTableView reloadData];
 }
+
 
 
 - (IBAction)showMenu

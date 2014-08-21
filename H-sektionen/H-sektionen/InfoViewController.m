@@ -38,7 +38,7 @@
         
         
         NSData* data = [NSData dataWithContentsOfURL:
-                        [NSURL URLWithString: @"http://www.prokrastinera.com/hsektionen/info/"]];
+                        [NSURL URLWithString: @"http://www.htek.se/appen/info/index.php"]];
         
         NSError* error;
         NSDictionary *json;

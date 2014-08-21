@@ -67,19 +67,19 @@
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 4:
-            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"infoController"]];
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"gasqueController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 5:
-            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"suggestController"]];
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"infoController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 6:
-            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"faultreportController"]];
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"suggestController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 7:
-            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"aboutController"]];
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"faultreportController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
 
@@ -121,8 +121,8 @@
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
-    NSArray *titles = @[@"Nyheter", @"Events", @"Dagens lunch", @"11an", @"Information", @"Förslagslådan", @"Felanmälan", @"Om appen"];
-    NSArray *images = @[@"IconNews", @"IconEvents", @"IconLunch", @"Icon11an", @"IconInformation", @"IconSuggest", @"IconFaultReport", @"IconAbout"];
+    NSArray *titles = @[@"Nyheter", @"Events", @"Dagens lunch", @"11an", @"Gasquen", @"Information", @"Förslagslådan", @"Felanmälan"];
+    NSArray *images = @[@"IconNews", @"IconEvents", @"IconLunch", @"Icon11an", @"IconGasquen", @"IconInformation", @"IconSuggest", @"IconFaultReport"];
     cell.textLabel.text = titles[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
     

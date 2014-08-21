@@ -10,7 +10,6 @@
 #import "RESideMenu.h"
 
 @interface NewsViewController : UITableViewController
-
 - (IBAction)showMenu;
 @property (strong, nonatomic) IBOutlet UITableView *newsTableView;
 

@@ -15,6 +15,7 @@
 		D74019A9181C34BA00F75A81 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019A8181C34BA00F75A81 /* EventsViewController.m */; };
 		D74019AC181C382000F75A81 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019AB181C382000F75A81 /* NewsViewController.m */; };
 		D74019AF181C815000F75A81 /* EventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74019AE181C815000F75A81 /* EventInfoViewController.m */; };
+		D753EDFF183FAAD8001508C8 /* NewsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D753EDFE183FAAD8001508C8 /* NewsInfoViewController.m */; };
 		D76222C1182CF333009D5087 /* InfoTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76222C0182CF333009D5087 /* InfoTabBarViewController.m */; };
 		D7646B51181854D900640692 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B50181854D900640692 /* Foundation.framework */; };
 		D7646B53181854D900640692 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7646B52181854D900640692 /* CoreGraphics.framework */; };
@@ -32,6 +33,7 @@
 		D772AE7E18291C760077B080 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772AE7D18291C760077B080 /* MessageUI.framework */; };
 		D772AE81182942080077B080 /* InfoMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D772AE80182942080077B080 /* InfoMembersViewController.m */; };
 		D772AE84182946070077B080 /* InfoLinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D772AE83182946070077B080 /* InfoLinksViewController.m */; };
+		D78AF5EC193FCD41009B8F1C /* iPad_main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78AF5EB193FCD41009B8F1C /* iPad_main.storyboard */; };
 		D7B58362183654A800D0BFFB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B58361183654A800D0BFFB /* AudioToolbox.framework */; };
 		D7B58364183654AF00D0BFFB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B58363183654AF00D0BFFB /* CFNetwork.framework */; };
 		D7B58366183654BE00D0BFFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B58365183654BE00D0BFFB /* CoreLocation.framework */; };
@@ -39,9 +41,7 @@
 		D7B5836A183654CE00D0BFFB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B58369183654CE00D0BFFB /* MobileCoreServices.framework */; };
 		D7B5836C183654D500D0BFFB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B5836B183654D500D0BFFB /* QuartzCore.framework */; };
 		D7B5836E183654DB00D0BFFB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B5836D183654DB00D0BFFB /* Security.framework */; };
-		D7B58370183654E100D0BFFB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B5836F183654E100D0BFFB /* StoreKit.framework */; };
 		D7B58372183654E900D0BFFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B58371183654E900D0BFFB /* SystemConfiguration.framework */; };
-		D7B5837518365F5800D0BFFB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B5837418365F5800D0BFFB /* Main_iPad.storyboard */; };
 		D7B5837718365FF400D0BFFB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B5837618365FF400D0BFFB /* Parse.framework */; };
 		D7BEFFA318217B24007DFF09 /* PubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEFFA218217B24007DFF09 /* PubViewController.m */; };
 		D7BEFFA818227AE1007DFF09 /* LunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEFFA718227AE1007DFF09 /* LunchViewController.m */; };
@@ -49,6 +49,9 @@
 		D7BEFFAE1823C7E1007DFF09 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEFFAD1823C7E1007DFF09 /* AboutViewController.m */; };
 		D7BEFFB11823CA24007DFF09 /* SuggestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEFFB01823CA24007DFF09 /* SuggestViewController.m */; };
 		D7BEFFB41823CA37007DFF09 /* FaultReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEFFB31823CA37007DFF09 /* FaultReportViewController.m */; };
+		D7FADAC21847943E001A7D66 /* GasqueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FADABD1847943E001A7D66 /* GasqueViewController.m */; };
+		D7FADAC31847943E001A7D66 /* AllGasqueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FADABF1847943E001A7D66 /* AllGasqueViewController.m */; };
+		D7FADAC41847943E001A7D66 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FADAC11847943E001A7D66 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,8 @@
 		D74019AB181C382000F75A81 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		D74019AD181C815000F75A81 /* EventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventInfoViewController.h; sourceTree = "<group>"; };
 		D74019AE181C815000F75A81 /* EventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInfoViewController.m; sourceTree = "<group>"; };
+		D753EDFD183FAAD8001508C8 /* NewsInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsInfoViewController.h; sourceTree = "<group>"; };
+		D753EDFE183FAAD8001508C8 /* NewsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsInfoViewController.m; sourceTree = "<group>"; };
 		D76222BF182CF333009D5087 /* InfoTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTabBarViewController.h; sourceTree = "<group>"; };
 		D76222C0182CF333009D5087 /* InfoTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTabBarViewController.m; sourceTree = "<group>"; };
 		D7646B4D181854D900640692 /* H-sektionen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H-sektionen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +107,7 @@
 		D772AE80182942080077B080 /* InfoMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoMembersViewController.m; sourceTree = "<group>"; };
 		D772AE82182946070077B080 /* InfoLinksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoLinksViewController.h; sourceTree = "<group>"; };
 		D772AE83182946070077B080 /* InfoLinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoLinksViewController.m; sourceTree = "<group>"; };
+		D78AF5EB193FCD41009B8F1C /* iPad_main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_main.storyboard; sourceTree = "<group>"; };
 		D7B58361183654A800D0BFFB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D7B58363183654AF00D0BFFB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D7B58365183654BE00D0BFFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -109,9 +115,7 @@
 		D7B58369183654CE00D0BFFB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D7B5836B183654D500D0BFFB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D7B5836D183654DB00D0BFFB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		D7B5836F183654E100D0BFFB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D7B58371183654E900D0BFFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D7B5837418365F5800D0BFFB /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		D7B5837618365FF400D0BFFB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D7BEFFA118217B24007DFF09 /* PubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubViewController.h; sourceTree = "<group>"; };
 		D7BEFFA218217B24007DFF09 /* PubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubViewController.m; sourceTree = "<group>"; };
@@ -125,6 +129,12 @@
 		D7BEFFB01823CA24007DFF09 /* SuggestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestViewController.m; sourceTree = "<group>"; };
 		D7BEFFB21823CA37007DFF09 /* FaultReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaultReportViewController.h; sourceTree = "<group>"; };
 		D7BEFFB31823CA37007DFF09 /* FaultReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaultReportViewController.m; sourceTree = "<group>"; };
+		D7FADABC1847943E001A7D66 /* GasqueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GasqueViewController.h; sourceTree = "<group>"; };
+		D7FADABD1847943E001A7D66 /* GasqueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GasqueViewController.m; sourceTree = "<group>"; };
+		D7FADABE1847943E001A7D66 /* AllGasqueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllGasqueViewController.h; sourceTree = "<group>"; };
+		D7FADABF1847943E001A7D66 /* AllGasqueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllGasqueViewController.m; sourceTree = "<group>"; };
+		D7FADAC01847943E001A7D66 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		D7FADAC11847943E001A7D66 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B58372183654E900D0BFFB /* SystemConfiguration.framework in Frameworks */,
-				D7B58370183654E100D0BFFB /* StoreKit.framework in Frameworks */,
 				D7B5836E183654DB00D0BFFB /* Security.framework in Frameworks */,
 				D7B5836C183654D500D0BFFB /* QuartzCore.framework in Frameworks */,
 				D7B5836A183654CE00D0BFFB /* MobileCoreServices.framework in Frameworks */,
@@ -171,6 +180,8 @@
 				D740198B181C261200F75A81 /* MenuViewController.m */,
 				D74019AA181C382000F75A81 /* NewsViewController.h */,
 				D74019AB181C382000F75A81 /* NewsViewController.m */,
+				D753EDFD183FAAD8001508C8 /* NewsInfoViewController.h */,
+				D753EDFE183FAAD8001508C8 /* NewsInfoViewController.m */,
 				D74019A7181C34BA00F75A81 /* EventsViewController.h */,
 				D74019A8181C34BA00F75A81 /* EventsViewController.m */,
 				D74019AD181C815000F75A81 /* EventInfoViewController.h */,
@@ -193,6 +204,12 @@
 				D7BEFFB31823CA37007DFF09 /* FaultReportViewController.m */,
 				D7BEFFAC1823C7E1007DFF09 /* AboutViewController.h */,
 				D7BEFFAD1823C7E1007DFF09 /* AboutViewController.m */,
+				D7FADABC1847943E001A7D66 /* GasqueViewController.h */,
+				D7FADABD1847943E001A7D66 /* GasqueViewController.m */,
+				D7FADABE1847943E001A7D66 /* AllGasqueViewController.h */,
+				D7FADABF1847943E001A7D66 /* AllGasqueViewController.m */,
+				D7FADAC01847943E001A7D66 /* WebViewController.h */,
+				D7FADAC11847943E001A7D66 /* WebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -235,7 +252,6 @@
 			children = (
 				D7B5837618365FF400D0BFFB /* Parse.framework */,
 				D7B58371183654E900D0BFFB /* SystemConfiguration.framework */,
-				D7B5836F183654E100D0BFFB /* StoreKit.framework */,
 				D7B5836D183654DB00D0BFFB /* Security.framework */,
 				D7B5836B183654D500D0BFFB /* QuartzCore.framework */,
 				D7B58369183654CE00D0BFFB /* MobileCoreServices.framework */,
@@ -255,11 +271,11 @@
 		D7646B56181854D900640692 /* H-sektionen */ = {
 			isa = PBXGroup;
 			children = (
+				D78AF5EA193FCCAD009B8F1C /* iPad */,
 				D7401989181C259F00F75A81 /* Controllers */,
 				D7646B5F181854D900640692 /* AppDelegate.h */,
 				D7646B60181854D900640692 /* AppDelegate.m */,
 				D7646B62181854D900640692 /* Main_iPhone.storyboard */,
-				D7B5837418365F5800D0BFFB /* Main_iPad.storyboard */,
 				D7646B6E181854D900640692 /* Images.xcassets */,
 				D7646B57181854D900640692 /* Supporting Files */,
 			);
@@ -293,6 +309,14 @@
 				D7646B7E181854D900640692 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D78AF5EA193FCCAD009B8F1C /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				D78AF5EB193FCD41009B8F1C /* iPad_main.storyboard */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,11 +363,16 @@
 		D7646B45181854D900640692 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jonas Berglund";
 				TargetAttributes = {
 					D7646B4C181854D900640692 = {
 						DevelopmentTeam = ZZ64DKD8Y3;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					D7646B73181854D900640692 = {
 						TestTargetID = D7646B4C181854D900640692;
@@ -375,7 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7646B6F181854D900640692 /* Images.xcassets in Resources */,
-				D7B5837518365F5800D0BFFB /* Main_iPad.storyboard in Resources */,
+				D78AF5EC193FCD41009B8F1C /* iPad_main.storyboard in Resources */,
 				D7646B64181854D900640692 /* Main_iPhone.storyboard in Resources */,
 				D7646B5B181854D900640692 /* InfoPlist.strings in Resources */,
 			);
@@ -399,6 +428,8 @@
 				D74019A5181C300B00F75A81 /* RESideMenu.m in Sources */,
 				D74019AF181C815000F75A81 /* EventInfoViewController.m in Sources */,
 				D7646B61181854D900640692 /* AppDelegate.m in Sources */,
+				D753EDFF183FAAD8001508C8 /* NewsInfoViewController.m in Sources */,
+				D7FADAC31847943E001A7D66 /* AllGasqueViewController.m in Sources */,
 				D772AE81182942080077B080 /* InfoMembersViewController.m in Sources */,
 				D7BEFFA318217B24007DFF09 /* PubViewController.m in Sources */,
 				D740198F181C26F700F75A81 /* RootViewController.m in Sources */,
@@ -410,8 +441,10 @@
 				D74019AC181C382000F75A81 /* NewsViewController.m in Sources */,
 				D772AE84182946070077B080 /* InfoLinksViewController.m in Sources */,
 				D7BEFFAE1823C7E1007DFF09 /* AboutViewController.m in Sources */,
+				D7FADAC21847943E001A7D66 /* GasqueViewController.m in Sources */,
 				D7BEFFA818227AE1007DFF09 /* LunchViewController.m in Sources */,
 				D76222C1182CF333009D5087 /* InfoTabBarViewController.m in Sources */,
+				D7FADAC41847943E001A7D66 /* WebViewController.m in Sources */,
 				D7BEFFB41823CA37007DFF09 /* FaultReportViewController.m in Sources */,
 				D74019A9181C34BA00F75A81 /* EventsViewController.m in Sources */,
 				D74019A6181C300B00F75A81 /* UIViewController+RESideMenu.m in Sources */,
@@ -468,7 +501,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -497,7 +529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -508,7 +540,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -531,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -543,8 +574,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jonas Berglund (BRF54BNHRM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jonas Berglund (BRF54BNHRM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jonasberglund/Documents/git/htek/H-sektionen",
@@ -552,9 +583,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "H-sektionen/H-sektionen-Prefix.pch";
 				INFOPLIST_FILE = "H-sektionen/H-sektionen-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CA30947D-1F72-4962-8B89-FAA8D6D75232";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -565,8 +596,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jonas Berglund (ZZ64DKD8Y3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jonas Berglund (ZZ64DKD8Y3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jonasberglund/Documents/git/htek/H-sektionen",
@@ -574,9 +605,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "H-sektionen/H-sektionen-Prefix.pch";
 				INFOPLIST_FILE = "H-sektionen/H-sektionen-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CA30947D-1F72-4962-8B89-FAA8D6D75232";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -585,7 +616,6 @@
 		D7646B89181854D900640692 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/H-sektionen.app/H-sektionen";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -608,7 +638,6 @@
 		D7646B8A181854D900640692 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/H-sektionen.app/H-sektionen";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
